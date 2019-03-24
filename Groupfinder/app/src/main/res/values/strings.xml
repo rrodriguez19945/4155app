@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Groupfinder</string>
+    <string name="enterButtonName">Enter</string>
+    <string name="myEventsName">My Events</string>
+    <string name="clubEventsName">Club Events</string>
+    <string name="collegeEventsName">College Events</string>
+    <string name="backButtonName">Back Button</string>
+</resources>
