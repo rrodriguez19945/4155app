@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.navigationmenu.AddCollegeEventActivity">
+            android:name="com.example.navigationmenu.EventPageActivity">
         </activity>
         <activity
             android:name="com.example.navigationmenu.AddClubEventActivity">

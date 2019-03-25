@@ -14,15 +14,16 @@ import android.widget.ImageButton;
 import java.util.ArrayList;
 
 public class CollegeEventsFragment extends Fragment {
-
+    private ArrayList<ExampleEventItems> mEventList;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_college_events, container, false);
         RecyclerView mRecyclerView;
-        RecyclerView.Adapter mAdapter;
+        EventAdapter mAdapter;
         RecyclerView.LayoutManager mLayoutManager;
+
 
         ArrayList<ExampleEventItems> eventList = new ArrayList<>();
         eventList.add(new ExampleEventItems(R.drawable.ic_sentiment_satisfied_black_24dp, "Line 1", "Line 2"));
@@ -37,6 +38,12 @@ public class CollegeEventsFragment extends Fragment {
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
+        mAdapter.setOnItemClickListener(new EventAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                mEventList.get(position);
+            }
+        });
 
         return v;
     }

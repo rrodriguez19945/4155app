@@ -11,6 +11,10 @@ public class ExampleEventItems {
         mText2 = text2;
     }
 
+    public void EventPage() {
+
+    }
+
     public int getImageResource() {
         return mImageResource;
     }

@@ -1,6 +1,7 @@
 <resources>
-    <string name="GroupFinder">GroupFinder</string>
+    <string name="EventFinder">EventFinder</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
 </resources>
