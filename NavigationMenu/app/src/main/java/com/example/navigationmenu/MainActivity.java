@@ -2,6 +2,7 @@ package com.example.navigationmenu;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -35,9 +36,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     new LogInFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
+
+
     }
-
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -46,13 +47,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HomeFragment()).commit();
                 break;
-            case R.id.nav_browse_events:
+            case R.id.nav_my_events:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new BrowseEventsFragment()).commit();
+                        new MyEventsFragment()).commit();
                 break;
-            case R.id.nav_add_event:
+            case R.id.nav_college_events:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new AddEventFragment()).commit();
+                        new CollegeEventsFragment()).commit();
+                break;
+            case R.id.nav_club_events:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ClubEventsFragment()).commit();
                 break;
             case R.id.nav_settings:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
