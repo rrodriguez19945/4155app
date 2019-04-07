@@ -26,6 +26,4 @@ public class ExampleEventItems {
     public String getText2() {
         return mText2;
     }
-
-
 }

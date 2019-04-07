@@ -1,7 +1,6 @@
 package com.example.navigationmenu;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -79,5 +78,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
     @Override
     public int getItemCount() {
         return mEventList.size();
+    }
+
+    public void filterList(ArrayList<ExampleEventItems> filteredList) {
+        mEventList = filteredList;
+        notifyDataSetChanged();
     }
 }

@@ -20,9 +20,6 @@
         <activity
             android:name="com.example.navigationmenu.EventPageActivity">
         </activity>
-        <activity
-            android:name="com.example.navigationmenu.AddClubEventActivity">
-        </activity>
     </application>
 
 </manifest>
