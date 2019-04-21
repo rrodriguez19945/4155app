@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {
-    private ArrayList<ExampleEventItems> mEventList;
+    private ArrayList<ExampleEventItems> mEventList = new ArrayList<>();
     private OnItemClickListener mListener;
 
     public interface OnItemClickListener {
@@ -26,14 +26,16 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
 
     public static class EventViewHolder extends RecyclerView.ViewHolder {
         public ImageView mImageView;
-        public TextView mTextView1;
-        public TextView mTextView2;
+        public TextView mTextViewTitle;
+        public TextView mTextViewSubtitle;
+        public TextView mTextViewDateTime;
 
         public EventViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
             mImageView = itemView.findViewById(R.id.imageView);
-            mTextView1 = itemView.findViewById(R.id.textView);
-            mTextView2 = itemView.findViewById(R.id.textView2);
+            mTextViewTitle = itemView.findViewById(R.id.textViewTitle);
+            mTextViewSubtitle = itemView.findViewById(R.id.textViewSubtitle);
+            mTextViewDateTime = itemView.findViewById(R.id.textViewDateTime);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -71,8 +73,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         ExampleEventItems currentItem = mEventList.get(i);
 
         eventViewHolder.mImageView.setImageResource(currentItem.getImageResource());
-        eventViewHolder.mTextView1.setText(currentItem.getText1());
-        eventViewHolder.mTextView2.setText(currentItem.getText2());
+        eventViewHolder.mTextViewTitle.setText(currentItem.getTitle());
+        eventViewHolder.mTextViewSubtitle.setText(currentItem.getSubTitle());
+        eventViewHolder.mTextViewDateTime.setText(currentItem.getDateTime());
+
     }
 
     @Override

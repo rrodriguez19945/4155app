@@ -18,8 +18,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.navigationmenu.EventPageActivity">
-        </activity>
+            android:name="com.example.navigationmenu.EventPageActivity"
+            android:label="@string/Event" />
+
     </application>
 
 </manifest>
