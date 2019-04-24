@@ -2,13 +2,19 @@ package com.example.navigationmenu;
 
 public class ExampleEventItems {
     private int mImageResource;
+    private int id;
     private String title;
     private String subTitle;
     private String dateTime;
+    private int cost;
+    private String location;
+    private String url;
 
     public void EventPage() {
 
     }
+
+    public void setId(int id) { this.id = id; }
 
     public void setTitle(String title) {
         this.title = title;
@@ -22,9 +28,17 @@ public class ExampleEventItems {
         this.dateTime = dateTime;
     }
 
+    //public void setCost(String cost) { this.cost = cost; }
+
+    public void setLocation(String location) { this.location = location; }
+
+    public void setUrl(String url) { this.url = url; }
+
     public int getImageResource() {
         return mImageResource;
     }
+
+    public int getId() { return id; }
 
     public String getTitle() {
         return title;
@@ -37,4 +51,10 @@ public class ExampleEventItems {
     public String getDateTime() {
         return dateTime;
     }
+
+    //public String getCost() { return cost; }
+
+    public String getLocation() { return location; }
+
+    public String getUrl() { return url; }
 }

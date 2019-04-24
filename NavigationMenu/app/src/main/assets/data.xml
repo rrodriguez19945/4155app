@@ -200,4 +200,25 @@
         organization="Department of Africana Studies"
         path="https://campusevents.uncc.edu/religious-racism-brazil"
     />
+    <item
+        count="21"
+        title="Club 49 with Daniel Franzese"
+        event-datetime="1556233200"
+        cost=""
+        location="Cone University Center"
+        event-type="Entertainment/Social | Student Organizations"
+        organization="Campus Activities Board (CAB)"
+        path="https://campusevents.uncc.edu/club-49-daniel-franzese"
+    />
+    <item
+        count="22"
+        title="Theater Production: Blues for an Alabama Sky"
+        event-datetime="1556235000"
+        cost="$8-$18"
+        location="Robinson Hall Belk Theater"
+        event-type="Arts and Culture"
+        organization="College of Arts + Architecture"
+        path="https://campusevents.uncc.edu/theater-production-blues-alabama-sky"
+    />
+
 </channel>

@@ -111,7 +111,9 @@ public class CollegeEventsFragment extends Fragment {
                         String dateTimeFormatted = dateTimeFormat.format(date);
 
                         ExampleEventItems event = new ExampleEventItems();
+                        event.setId(Integer.parseInt(parser.getAttributeValue(0)));
                         event.setTitle(parser.getAttributeValue(1));
+                        //event.setCost(parser.getAttributeValue(3));
                         event.setSubtitle(parser.getAttributeValue(6));
                         event.setDateTime(dateTimeFormatted);
 
@@ -144,6 +146,8 @@ public class CollegeEventsFragment extends Fragment {
 
         mAdapter.filterList(filteredList);
     }
+
+
 
     /*private void parseXML() {
         XmlPullParserFactory ppf;
