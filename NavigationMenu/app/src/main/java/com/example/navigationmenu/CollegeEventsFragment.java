@@ -113,14 +113,16 @@ public class CollegeEventsFragment extends Fragment {
                         ExampleEventItems event = new ExampleEventItems();
                         event.setId(Integer.parseInt(parser.getAttributeValue(0)));
                         event.setTitle(parser.getAttributeValue(1));
-                        //event.setCost(parser.getAttributeValue(3));
-                        event.setSubtitle(parser.getAttributeValue(6));
                         event.setDateTime(dateTimeFormatted);
+                        event.setCost(parser.getAttributeValue(3));
+                        event.setLocation(parser.getAttributeValue(4));
+                        event.setEventType(parser.getAttributeValue(5));
+                        event.setSubtitle(parser.getAttributeValue(6));
+                        event.setUrl(parser.getAttributeValue(7));
 
                         mEventList.add(event);
                     }
                 }
-
                 parser.next();
             }
         } catch (XmlPullParserException e) {

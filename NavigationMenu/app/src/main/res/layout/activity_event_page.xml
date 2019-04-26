@@ -6,126 +6,187 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textViewDateTimeLabel"
-        android:layout_width="230dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="164dp"
-        android:layout_marginRight="164dp"
+        android:id="@+id/textViewDTLabel"
+        android:layout_width="357dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:text="Date and Time:"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textViewEvTypeLabel"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+
+        android:text="Event Type:"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEvLocLabel"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textViewEvOrgLabel"
-        android:layout_width="185dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="11dp"
         android:text="Organizaton: "
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEvUrlLabel"
+        app:layout_constraintStart_toStartOf="@+id/textViewEvLocLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="189dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="1dp"
         android:text="Save This Event"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEvTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEvOrgLabel"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvUrlLabel" />
 
     <TextView
         android:id="@+id/textViewEvLocLabel"
-        android:layout_width="181dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="212dp"
-        android:layout_marginRight="212dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="353dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="7dp"
         android:text="Location:"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.67" />
-
-    <TextView
-        android:id="@+id/textViewEvTitle"
-        android:layout_width="110dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Title"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.035"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDTLabel"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.014" />
-
-    <TextView
-        android:id="@+id/textViewEvTypeLabel"
-        android:layout_width="175dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Event Type:"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.146" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textViewEvCostLabel"
-        android:layout_width="110dp"
-        android:layout_height="46dp"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="7dp"
+        android:text="Cost:"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEvLocLabel"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textViewEvUrlLabel"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="90dp"
+        android:text="Url:"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEvCostLabel"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:textColorLink="@android:color/holo_blue_dark"/>
+
+    <TextView
+        android:id="@+id/textViewEvTitle"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Cost:"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.035"
+        android:text="Event Type"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEvTypeLabel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.534" />
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Organization"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEvOrgLabel"
+        app:layout_constraintStart_toStartOf="@+id/textViewEvOrgLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvTypeLabel"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Date and Time"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDTLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvOrgLabel"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEvLocLabel"
+        app:layout_constraintStart_toStartOf="@+id/textViewEvLocLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDTLabel"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Cost"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEvCostLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvLocLabel"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="For more information"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewEvUrlLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvCostLabel"
+        android:textColor="@android:color/black"/>
 
 </android.support.constraint.ConstraintLayout>

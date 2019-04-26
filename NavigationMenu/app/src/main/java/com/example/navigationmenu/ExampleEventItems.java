@@ -6,8 +6,9 @@ public class ExampleEventItems {
     private String title;
     private String subTitle;
     private String dateTime;
-    private int cost;
+    private String cost;
     private String location;
+    private String eventType;
     private String url;
 
     public void EventPage() {
@@ -28,9 +29,11 @@ public class ExampleEventItems {
         this.dateTime = dateTime;
     }
 
-    //public void setCost(String cost) { this.cost = cost; }
+    public void setCost(String cost) { this.cost = cost; }
 
     public void setLocation(String location) { this.location = location; }
+
+    public void setEventType(String eventType) { this.eventType = eventType; }
 
     public void setUrl(String url) { this.url = url; }
 
@@ -52,9 +55,11 @@ public class ExampleEventItems {
         return dateTime;
     }
 
-    //public String getCost() { return cost; }
+    public String getCost() { return cost; }
 
     public String getLocation() { return location; }
+
+    public String getEventType() { return eventType; }
 
     public String getUrl() { return url; }
 }

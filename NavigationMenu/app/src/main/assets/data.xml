@@ -220,5 +220,254 @@
         organization="College of Arts + Architecture"
         path="https://campusevents.uncc.edu/theater-production-blues-alabama-sky"
     />
-
+    <item
+        count="23"
+        title="Religion, Racism, and Religious Racism: The Color of Faith Discrimination (17th Annual Africana Studies Symposium)"
+        event-datetime="1556281800"
+        cost="Free"
+        location="Atkins Library 143"
+        event-type="Academic | Conferences | Diversity | Faculty/Staff | Graduate Students | Multicultural | Public/Community | Research | Speakers/Lectures | Workshops"
+        organization="Department of Africana Studies"
+        path="https://campusevents.uncc.edu/religion-racism-religious-racism-color-faith-discrimination-17th-annual-africana-studies-symposium"
+    />
+    <item
+        count="24"
+        title="Workshop: Time Management"
+        event-datetime="1556295300"
+        cost="Free"
+        location="Colvard 2006"
+        event-type="Workshops"
+        organization="University Center for Academic Excellence (UCAE)"
+        path="https://campusevents.uncc.edu/workshop-time-management-18"
+    />
+    <item
+        count="25"
+        title="Finer Niners A Cappella Spring Showcase"
+        event-datetime="1556319600"
+        cost="Free"
+        location="Cone University Center After Hours"
+        event-type="Arts and Culture | Entertainment/Social | Student Organizations | Weekend"
+        organization="Student Organizations"
+        path="https://campusevents.uncc.edu/finer-niners-cappella-spring-showcase"
+    />
+    <item
+        count="26"
+        title="Theater Production: Blues for an Alabama Sky"
+        event-datetime="1556321400"
+        cost="$8-$18"
+        location="Robinson Hall Belk Theater"
+        event-type="Arts and Culture"
+        organization="College of Arts + Architecture"
+        path="https://campusevents.uncc.edu/theater-production-blues-alabama-sky"
+    />
+    <item
+        count="27"
+        title="Men's Rugby Club Tournament"
+        event-datetime="1556370000"
+        cost="Free with valid UNC Charlotte ID"
+        location="Rec Field 12"
+        event-type="Recreation and Fitness | Sport Clubs | Workshops"
+        organization="Sport Clubs | University Recreation | Weekend"
+        path="https://campusevents.uncc.edu/mens-rugby-club-tournament"
+    />
+    <item
+        count="28"
+        title="Picnic Palooza"
+        event-datetime="1556380800"
+        cost=""
+        location="CHHS/CoEd Plaza"
+        event-type="Entertainment/Social | Outdoors | Student Organizations | Weekend"
+        organization="Weekend | Campus Activities Board (CAB)"
+        path="https://campusevents.uncc.edu/picnic-palooza"
+    />
+    <item
+        count="29"
+        title="Theater Production: Blues for an Alabama Sky"
+        event-datetime="1556407800"
+        cost="$8-$18"
+        location="Robinson Hall Belk Theater"
+        event-type="Arts and Culture"
+        organization="College of Arts + Architecture"
+        path="https://campusevents.uncc.edu/theater-production-blues-alabama-sky"
+    />
+    <item
+        count="30"
+        title="Venture Whitewater Kayaking Day Trip"
+        event-datetime="1556447400"
+        cost="Students $45, Faculty/Staff $70, Community $85"
+        location=""
+        event-type="Outdoors | Recreation and Fitness | Weekend"
+        organization="Venture Outdoor Leadership | Weekend"
+        path="https://campusevents.uncc.edu/venture-whitewater-kayaking-day-trip"
+    />
+    <item
+        count="31"
+        title="Theater Production: Blues for an Alabama Sky"
+        event-datetime="1556474400"
+        cost="$8-$18"
+        location="Robinson Hall"
+        event-type="Arts snd Culture | Entertainment/Social | Weekend"
+        organization="College of Arts + Architecture"
+        path="https://campusevents.uncc.edu/theater-production-blues-alabama-sky-0"
+    />
+    <item
+        count="32"
+        title="Workshop: I'm Stressed"
+        event-datetime="1556546400"
+        cost="Free"
+        location="Colvard 2006"
+        event-type="Workshops"
+        organization="University Center for Academic Excellence (UCAE)"
+        path="https://campusevents.uncc.edu/workshop-im-stressed-13"
+    />
+    <item
+        count="33"
+        title="CAB: See You in 49 Years Personalized Time Capsules"
+        event-datetime="1556553600"
+        cost=""
+        location="Cone University Center"
+        event-type="Arts and Culture | Entertainment/Social | Student Organizations"
+        organization="Campus Activities Board (CAB)"
+        path="https://campusevents.uncc.edu/cab-see-you-49-years-personalized-time-capsules"
+    />
+    <item
+        count="34"
+        title="De-stress Before the Test"
+        event-datetime="1556553600"
+        cost=""
+        location="Popp Martin Student Union"
+        event-type="Entertainment/Social | Health and Wellness"
+        organization="Campus Activities Board (CAB)"
+        path="https://campusevents.uncc.edu/de-stress-test-0"
+    />
+    <item
+        count="35"
+        title="Indoor Climbing Wall Open Climb"
+        event-datetime="1556571600"
+        cost="Free! First visit, $5/visit (bring your own harness and shoes), $11/visit (includes harness and shoe rental), $20 Semester pass (bring your own harness and shoes), $40 Semester pass (includes harness and shoe rental)"
+        location="Barnhardt Student Activity Center (SAC) 185A"
+        event-type="Faculty/Staff | Graduate Students | Health and Wellness | Outdoors | Recreation and Fitness"
+        organization="Venture Outdoor Leadership"
+        path="https://campusevents.uncc.edu/indoor-climbing-wall-open-climb"
+    />
+    <item
+        count="36"
+        title="QTPOC Conversations"
+        event-datetime="1556573400"
+        cost="Free"
+        location="one University Center 111B"
+        event-type="Diversity | Health and Wellness | Student Organizations"
+        organization="Counseling and Psychological Services | Office of Identity, Equity, and Engagement | Student Organizations"
+        path="https://campusevents.uncc.edu/qtpoc-conversations"
+    />
+    <item
+        count="37"
+        title="Workshop: Prepping for Tests"
+        event-datetime="1556575200"
+        cost="Free"
+        location="Colvard 2006"
+        event-type="Workshops"
+        organization="University Center for Academic Excellence (UCAE)"
+        path="https://campusevents.uncc.edu/workshop-prepping-tests-14"
+    />
+    <item
+        count="38"
+        title="Bible Study"
+        event-datetime="1556578800"
+        cost="Free"
+        location="Cone University Center 207/208"
+        event-type="Diversity | Multicultural | Religious | Student Organizations"
+        organization="Student Organizations"
+        path="https://campusevents.uncc.edu/bible-study"
+    />
+    <item
+        count="39"
+        title="Workshop: #StudyHacks"
+        event-datetime="1556638200"
+        cost="Free"
+        location="Colvard 2006"
+        event-type="Workshops"
+        organization="University Center for Academic Excellence (UCAE)"
+        path="https://campusevents.uncc.edu/workshop-studyhacks-19"
+    />
+    <item
+        count="40"
+        title="Workshop: Finding Your Motivation"
+        event-datetime="1556649000"
+        cost="Free"
+        location="Colvard 2006"
+        event-type="Workshops"
+        organization="University Center for Academic Excellence (UCAE)"
+        path="https://campusevents.uncc.edu/workshop-finding-your-motivation-15"
+    />
+    <item
+        count="41"
+        title="Indoor Climbing Wall Open Climb"
+        event-datetime="1556658000"
+        cost="Free! First visit, $5/visit (bring your own harness and shoes), $11/visit (includes harness and shoe rental), $20 Semester pass (bring your own harness and shoes), $40 Semester pass (includes harness and shoe rental)"
+        location="Barnhardt Student Activity Center (SAC) 185A"
+        event-type="Faculty/Staff | Graduate Students | Health and Wellness | Outdoors | Recreation and Fitness"
+        organization="Venture Outdoor Leadership"
+        path="https://campusevents.uncc.edu/indoor-climbing-wall-open-climb"
+    />
+    <item
+        count="42"
+        title="Atkins Out Loud: Trombone Performance"
+        event-datetime="1556658000"
+        cost="Free"
+        location="Atkins Library Halton Room"
+        event-type="Entertainment/Social"
+        organization="Atkins Library"
+        path="https://campusevents.uncc.edu/atkins-out-loud-trombone-performance"
+    />
+    <item
+        count="43"
+        title="LDOC Concert: Waka Flocka featuring Saweetie and Next Town Down"
+        event-datetime="1556661600"
+        cost="Free to Current UNCC Charlotte Students"
+        location="Jerry Richardson Stadium"
+        event-type="Arts and Culture | Entertainment/Social | Special Events/Ceremonies"
+        organization="Campus Activities Board (CAB)"
+        path="https://campusevents.uncc.edu/ldoc-concert-waka-flocka-featuring-saweetie-and-next-town-down"
+    />
+    <item
+        count="44"
+        title="Veterans Spring 2019 Summit"
+        event-datetime="1556719200"
+        cost=""
+        location="Cone University Center 113"
+        event-type="Health and Wellness | Public/Community | Workshops"
+        organization="Office of Veteran Student Services"
+        path="https://campusevents.uncc.edu/veterans-spring-2019-summit"
+    />
+    <item
+        count="45"
+        title="White Consciousness Conversations"
+        event-datetime="1556899200"
+        cost="Free"
+        location="Popp Martin Student Union 261"
+        event-type="Diversity | Faculty/Staff | Multicultural | Staff/Faculty Only | Workshops"
+        organization="Office of Identity, Equity, and Engagement"
+        path="https://campusevents.uncc.edu/white-consciousness-conversations-4"
+    />
+    <item
+        count="46"
+        title="Queer Year 1"
+        event-datetime="1557180000"
+        cost="Free"
+        location="Popp Martin Student Union 262"
+        event-type="Diversity"
+        organization="Office of Identity, Equity, and Engagement"
+        path="https://campusevents.uncc.edu/queer-year-1-16"
+    />
+    <item
+        count="47"
+        title="Bible Study"
+        event-datetime="1557183600"
+        cost="Free"
+        location="Cone University Center 207/208"
+        event-type="Diversity | Multicultural | Religious | Student Organizations"
+        organization="Student Organizations"
+        path="https://campusevents.uncc.edu/bible-study"
+    />
 </channel>
