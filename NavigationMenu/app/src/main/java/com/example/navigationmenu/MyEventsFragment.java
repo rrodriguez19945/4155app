@@ -33,7 +33,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 public class MyEventsFragment extends Fragment{
-    ArrayList<ExampleEventItems> mEventList = new ArrayList<>();
+    //ArrayList<ExampleEventItems> mEventList = new ArrayList<>();
     private RecyclerView mRecyclerView;
     private EventAdapter mAdapter;
     private LinearLayoutManager mLinearLayoutManager;
@@ -54,14 +54,14 @@ public class MyEventsFragment extends Fragment{
         mRecyclerView.addItemDecoration(itemDecorator);
         mRecyclerView.setHasFixedSize(true);
 
-        mAdapter = new EventAdapter(mEventList);
+        mAdapter = new EventAdapter(Singleton.getInstance().getArrayList());
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
         mAdapter.setOnItemClickListener(new EventAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                mEventList.get(position);
+                Singleton.getInstance().getArrayList().get(position);
             }
         });
 
@@ -151,7 +151,7 @@ public class MyEventsFragment extends Fragment{
         event.setSubtitle(prefs.getString("organization", "null"));
         event.setUrl(prefs.getString("url", "null"));
 
-        mEventList.add(event);
+     
 
         mAdapter.notifyDataSetChanged();
 

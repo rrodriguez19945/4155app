@@ -121,9 +121,12 @@ public class MyEventsActivity extends AppCompatActivity {
             mEventList.add(event);
         }*/
 
+        ArrayList<ExampleEventItems> list = new ArrayList<>();
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         ExampleEventItems event = new ExampleEventItems();
+        //TinyDB tbd = new TinyDB(this);
+        //tbd.getListObject("list", list);
         event.setTitle(prefs.getString("title", "null"));
         event.setDateTime(prefs.getString("datetime", "null"));
         event.setCost(prefs.getString("cost", "null"));
@@ -132,7 +135,14 @@ public class MyEventsActivity extends AppCompatActivity {
         event.setSubtitle(prefs.getString("organization", "null"));
         event.setUrl(prefs.getString("url", "null"));
 
+
         mEventList.add(event);
+
+        /*ArrayList<ExampleEventItems> eList = new ArrayList<>();
+
+        for (ExampleEventItems ev : list) {
+            eList.add(ev);
+        }*/
 
         mAdapter.notifyDataSetChanged();
 
@@ -140,6 +150,8 @@ public class MyEventsActivity extends AppCompatActivity {
         //    savedInstanceState.putParcelableArrayList("Events", mEventList);
         //}
     }
+
+
 
     /*@Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
