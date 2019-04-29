@@ -1,20 +1,20 @@
 package com.example.navigationmenu;
 
-import android.content.res.AssetManager;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.os.Parcelable;
+import android.preference.PreferenceManager;
+import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.EditText;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -28,24 +28,27 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class CollegeEventsFragment extends Fragment {
-    ArrayList<ExampleEventItems> mEventList = new ArrayList<>();
+public class MyEventsActivity extends AppCompatActivity {
+    private ArrayList<ExampleEventItems> mEventList = new ArrayList<>();
     private RecyclerView mRecyclerView;
     private EventAdapter mAdapter;
     private LinearLayoutManager mLinearLayoutManager;
     private DividerItemDecoration itemDecorator;
+    private Bundle mBundleRecyclerViewState;
+    private String KEY_RECYCLER_STATE = "save";
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_college_events, container, false);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_my_events);
 
-        ((MainActivity) getActivity()).setActionBarTitle("College Events");
+        setTitle("My Events");
 
-        mRecyclerView = v.findViewById(R.id.recyclerView);
-        mLinearLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView = findViewById(R.id.recyclerView);
+        mLinearLayoutManager = new LinearLayoutManager(new Activity());
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
-        itemDecorator = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
-        itemDecorator.setDrawable(ContextCompat.getDrawable(getContext(), R.drawable.divider));
+        itemDecorator = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
+        itemDecorator.setDrawable(ContextCompat.getDrawable(this, R.drawable.divider));
         mRecyclerView.addItemDecoration(itemDecorator);
         mRecyclerView.setHasFixedSize(true);
 
@@ -60,29 +63,11 @@ public class CollegeEventsFragment extends Fragment {
             }
         });
 
-        EditText editText = v.findViewById(R.id.edittext);
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                filter(s.toString());
-            }
-        });
-
-        try {
+        /*try {
             XmlPullParserFactory ppf;
             ppf = XmlPullParserFactory.newInstance();
             XmlPullParser parser = ppf.newPullParser();
-            AssetManager am = getContext().getAssets();
+            AssetManager am = this.getAssets();
             InputStream is = am.open("data.xml");
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
             parser.setInput(is, null);
@@ -125,24 +110,42 @@ public class CollegeEventsFragment extends Fragment {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
+
+        /*Bundle b = getIntent().getExtras();
+        if (b != null) {
+            ExampleEventItems event = new ExampleEventItems();
+            event.setTitle(b.getString("title"));
+            event.setSubtitle(b.getString("organization"));
+            event.setDateTime(b.getString("datetime"));
+            mEventList.add(event);
+        }*/
+
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        ExampleEventItems event = new ExampleEventItems();
+        event.setTitle(prefs.getString("title", "null"));
+        event.setDateTime(prefs.getString("datetime", "null"));
+        event.setCost(prefs.getString("cost", "null"));
+        event.setLocation(prefs.getString("location", "null"));
+        event.setEventType(prefs.getString("eventtype", "null"));
+        event.setSubtitle(prefs.getString("organization", "null"));
+        event.setUrl(prefs.getString("url", "null"));
+
+        mEventList.add(event);
 
         mAdapter.notifyDataSetChanged();
 
-        return v;
+        //if (mEventList.size() != 0) {
+        //    savedInstanceState.putParcelableArrayList("Events", mEventList);
+        //}
     }
 
-    private void filter(String text) {
-        ArrayList<ExampleEventItems> filteredList = new ArrayList<>();
-
-        for (ExampleEventItems item : mEventList){
-            if (item.getTitle().toLowerCase().contains(text.toLowerCase()))
-                filteredList.add(item);
-            else if (item.getSubTitle().toLowerCase().contains(text.toLowerCase()))
-                filteredList.add(item);
-        }
-
-        mAdapter.filterList(filteredList);
-    }
-
+    /*@Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore UI state from the savedInstanceState.
+        // This bundle has also been passed to onCreate.
+        ArrayList<Parcelable> ev = savedInstanceState.getParcelableArrayList("Events");
+    }*/
 }

@@ -29,7 +29,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         mListener = listener;
     }
 
-    public static class EventViewHolder extends RecyclerView.ViewHolder {
+    public class EventViewHolder extends RecyclerView.ViewHolder {
         public ImageView mImageView;
         public TextView mTextViewTitle;
         public TextView mTextViewDateTime;
@@ -62,6 +62,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
                     i.putExtra("eventtype", mEventList.get(getLayoutPosition()).getEventType());
                     i.putExtra("organization", mTextViewSubtitle.getText().toString());
                     i.putExtra("url", mEventList.get(getLayoutPosition()).getUrl());
+                    notifyItemRangeChanged(getLayoutPosition(), mEventList.size());
                     c.startActivity(i);
                 }
             });
@@ -95,4 +96,5 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         mEventList = filteredList;
         notifyDataSetChanged();
     }
+
 }

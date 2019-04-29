@@ -20,7 +20,7 @@
         <activity
             android:name="com.example.navigationmenu.EventPageActivity"
             android:label="@string/Event" />
-
+        <activity android:name=".MyEventsActivity" />
     </application>
 
 </manifest>

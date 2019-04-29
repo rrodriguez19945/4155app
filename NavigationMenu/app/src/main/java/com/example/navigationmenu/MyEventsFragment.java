@@ -1,7 +1,8 @@
 package com.example.navigationmenu;
 
-import android.content.res.AssetManager;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -30,7 +32,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class MyEventsFragment extends Fragment {
+public class MyEventsFragment extends Fragment{
     ArrayList<ExampleEventItems> mEventList = new ArrayList<>();
     private RecyclerView mRecyclerView;
     private EventAdapter mAdapter;
@@ -81,7 +83,7 @@ public class MyEventsFragment extends Fragment {
             }
         });*/
 
-        try {
+        /*try {
             XmlPullParserFactory ppf;
             ppf = XmlPullParserFactory.newInstance();
             XmlPullParser parser = ppf.newPullParser();
@@ -130,10 +132,32 @@ public class MyEventsFragment extends Fragment {
             e.printStackTrace();
         }
 
+        mAdapter.notifyDataSetChanged();*/
+
+        /*((EventPageActivity) getActivity()).passValue(new FragmentCommunicator() {
+            @Override
+            public void passData(ExampleEventItems event) {
+                mEventList.add(event);
+            }
+        });*/
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        ExampleEventItems event = new ExampleEventItems();
+        event.setTitle(prefs.getString("title", "null"));
+        event.setDateTime(prefs.getString("datetime", "null"));
+        event.setCost(prefs.getString("cost", "null"));
+        event.setLocation(prefs.getString("location", "null"));
+        event.setEventType(prefs.getString("eventtype", "null"));
+        event.setSubtitle(prefs.getString("organization", "null"));
+        event.setUrl(prefs.getString("url", "null"));
+
+        mEventList.add(event);
+
         mAdapter.notifyDataSetChanged();
 
         return v;
     }
+
 
     /*private void filter(String text) {
         ArrayList<ExampleEventItems> filteredList = new ArrayList<>();

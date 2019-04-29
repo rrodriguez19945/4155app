@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSaveEv"
         android:layout_width="189dp"
         android:layout_height="52dp"
         android:layout_marginBottom="1dp"
@@ -94,7 +94,7 @@
         android:layout_marginBottom="90dp"
         android:text="Url:"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSaveEv"
         app:layout_constraintEnd_toEndOf="@+id/textViewEvCostLabel"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
@@ -112,7 +112,7 @@
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSaveEv" />
 
     <TextView
         android:id="@+id/textView"

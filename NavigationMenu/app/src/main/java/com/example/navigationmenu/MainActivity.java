@@ -1,5 +1,6 @@
 package com.example.navigationmenu;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,7 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private DrawerLayout drawer;
+    protected DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new LogInFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
+
         }
     }
 
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_my_events:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new MyEventsFragment()).commit();
+                //Intent i = new Intent(MainActivity.this, MyEventsActivity.class);
+                //startActivity(i);
                 break;
             case R.id.nav_college_events:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
