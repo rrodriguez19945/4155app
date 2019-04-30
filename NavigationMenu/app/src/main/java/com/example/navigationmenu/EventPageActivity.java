@@ -37,6 +37,7 @@ public class EventPageActivity extends AppCompatActivity {
         btnSave = findViewById(R.id.buttonSaveEv);
 
         Intent result = getIntent();
+        final int id = result.getExtras().getInt("id");
         final String titleResult = result.getExtras().getString("title");
         final String dateTimeResult = result.getExtras().getString("datetime");
         final String costResult = result.getExtras().getString("cost");
@@ -67,18 +68,24 @@ public class EventPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(EventPageActivity.this);
-                SharedPreferences.Editor editor = prefs.edit();
-                //TinyDB tbd = new TinyDB(EventPageActivity.this);
-                //tbd.putListObject("list", event);
-                editor.putString("title", titleResult);
-                editor.putString("datetime", dateTimeResult);
-                editor.putString("cost", costResult);
-                editor.putString("location", locationResult);
-                editor.putString("eventtype", eventTypeResult);
-                editor.putString("organization", orgResult);
-                editor.putString("url", urlResult);
-                editor.commit();
+                boolean addEvent = false;
+                ExampleEventItems event = new ExampleEventItems();
+                for (ExampleEventItems savedEvent : Singleton.getInstance().getArrayList()) {
+                    if (event.getId() == id)
+                        addEvent = true;
+                }
+                if (addEvent == true) {
+                    event.setId(id);
+                    event.setTitle(titleResult);
+                    event.setDateTime(dateTimeResult);
+                    event.setCost(costResult);
+                    event.setLocation(locationResult);
+                    event.setEventType(eventTypeResult);
+                    event.setSubtitle(orgResult);
+                    event.setUrl(urlResult);
+                }
+
+                Singleton.getInstance().getArrayList().add(event);
 
                 showMessage("Event saved.");
             }

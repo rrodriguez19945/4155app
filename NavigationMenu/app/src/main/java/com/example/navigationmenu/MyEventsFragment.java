@@ -141,17 +141,6 @@ public class MyEventsFragment extends Fragment{
             }
         });*/
 
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
-        ExampleEventItems event = new ExampleEventItems();
-        event.setTitle(prefs.getString("title", "null"));
-        event.setDateTime(prefs.getString("datetime", "null"));
-        event.setCost(prefs.getString("cost", "null"));
-        event.setLocation(prefs.getString("location", "null"));
-        event.setEventType(prefs.getString("eventtype", "null"));
-        event.setSubtitle(prefs.getString("organization", "null"));
-        event.setUrl(prefs.getString("url", "null"));
-
-     
 
         mAdapter.notifyDataSetChanged();
 
