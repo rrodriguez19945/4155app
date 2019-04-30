@@ -74,7 +74,7 @@ public class EventPageActivity extends AppCompatActivity {
                     if (event.getId() == id)
                         addEvent = true;
                 }
-                if (addEvent == true) {
+                if (addEvent != true) {
                     event.setId(id);
                     event.setTitle(titleResult);
                     event.setDateTime(dateTimeResult);
@@ -83,11 +83,12 @@ public class EventPageActivity extends AppCompatActivity {
                     event.setEventType(eventTypeResult);
                     event.setSubtitle(orgResult);
                     event.setUrl(urlResult);
+                    Singleton.getInstance().getArrayList().add(event);
+                    showMessage("Event saved.");
                 }
+                else
+                    showMessage("Event already saved.");
 
-                Singleton.getInstance().getArrayList().add(event);
-
-                showMessage("Event saved.");
             }
         });
     }
