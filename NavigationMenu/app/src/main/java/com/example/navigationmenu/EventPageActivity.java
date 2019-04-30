@@ -20,8 +20,6 @@ public class EventPageActivity extends AppCompatActivity {
     private TextView tVOrganization;
     private TextView tVUrl;
     private Button btnSave;
-    private ArrayList<ExampleEventItems> event = new ArrayList<>();
-    private ExampleEventItems eventItem = new ExampleEventItems();
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -71,7 +69,7 @@ public class EventPageActivity extends AppCompatActivity {
                 boolean addEvent = false;
                 ExampleEventItems event = new ExampleEventItems();
                 for (ExampleEventItems savedEvent : Singleton.getInstance().getArrayList()) {
-                    if (event.getId() == id)
+                    if (event.getTitle().equals(titleResult))
                         addEvent = true;
                 }
                 if (addEvent != true) {
