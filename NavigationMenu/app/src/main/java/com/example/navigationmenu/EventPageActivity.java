@@ -66,13 +66,7 @@ public class EventPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                boolean addEvent = false;
                 ExampleEventItems event = new ExampleEventItems();
-                for (ExampleEventItems savedEvent : Singleton.getInstance().getArrayList()) {
-                    if (event.getTitle().equals(titleResult))
-                        addEvent = true;
-                }
-                if (addEvent != true) {
                     event.setId(id);
                     event.setTitle(titleResult);
                     event.setDateTime(dateTimeResult);
@@ -83,10 +77,6 @@ public class EventPageActivity extends AppCompatActivity {
                     event.setUrl(urlResult);
                     Singleton.getInstance().getArrayList().add(event);
                     showMessage("Event saved.");
-                }
-                else
-                    showMessage("Event already saved.");
-
             }
         });
     }
